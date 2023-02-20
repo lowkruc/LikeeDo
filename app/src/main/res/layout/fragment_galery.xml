@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.galery.GaleryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/noData"
+            android:padding="100dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_file"
+                app:tint="#cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Files Downloaded!"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have no downloaded video from likee"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="12dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/pinkAccent">
+
+                <TextView
+                    android:id="@+id/dowmloadNow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:text="Open Likee"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/itemFile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:background="@drawable/ic_theme__rounded_edittext_white"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/toolbarDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/closeDeleteItem"
+                    android:elevation="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_close"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/totalFileDelete"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="10dp"
+                    android:layout_toRightOf="@+id/closeDeleteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Delete 5 File"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="12dp"/>
+
+                <FrameLayout
+                    android:id="@+id/btnDeleteFile"
+                    android:elevation="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_trash_mini"
+                        app:tint="@color/pinkAccent" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingBottom="10dp"
+                android:overScrollMode="never"
+                android:layout_weight="1"
+                android:id="@+id/listDownload"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/rv_list_download_item"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

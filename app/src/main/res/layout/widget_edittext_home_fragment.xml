@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="15dp"
+    android:paddingHorizontal="10dp"
+
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/devider"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgrounGrey"/>
+
+    <EditText
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/editTextValue"
+        android:layout_below="@id/devider"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="20dp"
+        android:hint="Paste link share"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="14sp"
+        android:includeFontPadding="false"
+        android:textColor="@color/pinkAccent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_theme__rounded_edittext_grey"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/editTextValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_weight="0.475"
+            app:cardBackgroundColor="@color/pinkAccent"
+            android:layout_width="0dp"
+            app:contentPadding="2dp"
+            android:layout_height="37dp"
+            app:cardCornerRadius="7dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
+
+        <FrameLayout
+            android:id="@+id/pasteLink"
+            android:background="@drawable/ic_theme__rounded_edittext_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paste Link"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/pinkAccent"/>
+
+        </FrameLayout>
+        </androidx.cardview.widget.CardView>
+        <FrameLayout
+            android:layout_weight="0.05"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView
+            android:layout_weight="0.475"
+            app:cardBackgroundColor="@color/pinkAccent"
+            android:layout_width="0dp"
+            app:contentPadding="2dp"
+            android:layout_height="37dp"
+            app:cardCornerRadius="7dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
+
+            <FrameLayout
+                android:id="@+id/downloadLink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Download"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"/>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

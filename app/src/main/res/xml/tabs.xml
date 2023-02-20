@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        drawable="@drawable/ic_home"
+        text="@string/homeTabs" />
+    <tab
+        drawable="@drawable/ic_galery"
+        text="@string/downloadTabs" />
+</tabs>

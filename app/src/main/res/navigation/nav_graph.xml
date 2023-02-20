@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.likee.video.downloader.nowatermark.fragments.home.HomeFragment"
+        android:label="LikeeDown"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/galeryFragment"
+        android:name="com.app.likee.video.downloader.nowatermark.fragments.galery.GaleryFragment"
+        android:label="My Download"
+        tools:layout="@layout/fragment_galery" />
+</navigation>
